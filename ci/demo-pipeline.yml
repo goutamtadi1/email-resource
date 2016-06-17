@@ -2,19 +2,24 @@ resources:
   - name: email-resource-source
     type: git
     source:
-      uri: https://github.com/pivotal-cf/email-resource
-      branch: master
+      uri: git@github.com:goutamtadi1/email-resource.git 
+      private_key: {{g2c-git-key}}
+      branch: golang_timeout 
   - name: send-an-email
     type: email
     source:
       smtp:
-        host: {{smtp-host}}
-        port: {{smtp-port}}
-        username: {{smtp-username}}
-        password: {{smtp-password}}
-      from: {{email-from}}
-      to: [ {{email-to}} ]
-
+        host: smtp.gmail.com
+        port: "465"
+        username: goutam.tadi1
+        password: "Abc007@#"
+      from: goutam.tadi1@gmail.com
+      to: ["csloan@pivotal.io"]
+resource_types:
+  - name: email
+    type: docker-image
+    source:
+      repository: pcfseceng/email-resource
 jobs:
   - name: demo-email-an-artifact-sha
     plan:
