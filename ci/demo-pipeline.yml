@@ -10,11 +10,11 @@ resources:
     source:
       smtp:
         host: smtp.gmail.com
-        port: "465"
-        username: goutam.tadi1
-        password: "Abc007@#"
-      from: goutam.tadi1@gmail.com
-      to: ["csloan@pivotal.io"]
+        port: "587"
+        username: xxxxxxxx 
+        password: "#"
+      from: xxxxx
+      to: ["xxxxxx"]
 resource_types:
   - name: email
     type: docker-image
