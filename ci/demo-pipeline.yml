@@ -34,5 +34,5 @@ jobs:
             output_body_file: generated-body
       - put: send-an-email
         params:
-          subject: demo-prep-sha-email/generated-subject
-          body: demo-prep-sha-email/generated-body
+          subject: email-out/generated-subject
+          body: email-out/generated-body
